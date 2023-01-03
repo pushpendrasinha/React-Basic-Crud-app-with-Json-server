@@ -56,7 +56,6 @@ class ListEmployeeComponent extends Component {
                                         <td>{employee.lastname}</td>
                                         <td> {employee.email} </td>
                                         <td>
-                                            {/* <button type="button" className="btn btn-primary button-space">Update</button> */}
                                             <Link to={"/add/"+employee.id} className="btn btn-primary button-space">Update</Link>
                                             <button type="button" className="btn btn-danger button-space"
                                              onClick={()=>this.deleteEmployee(employee.id)} > Delete </button>

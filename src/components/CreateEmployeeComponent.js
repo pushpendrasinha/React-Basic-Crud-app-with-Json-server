@@ -17,7 +17,6 @@ class CreateEmployeeComponent extends Component {
             firstname: '',
             lastname: '',
             email: '',
-            // submitted: false,
             id: this.props.router.params.id,
         }
     }
@@ -73,6 +72,7 @@ class CreateEmployeeComponent extends Component {
         }else{
                 EmployeeService.updateEmployee(this.state.id, employee).then( res=>{
                     console.log(employee);
+                    this.props.router.navigate("/");
             }).catch(error=>{
                 console.log(error);
             })
